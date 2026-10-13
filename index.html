@@ -1,22 +1,117 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title> Kiki's website </title>
-<link href="style.css" rel="stylesheet" type="text/css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiki's Website</title>
+
+    <!-- Connect the CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body> 
-    <div class="nav">
-        <h3>Kiki's Website</h3>
-        <u1>
-            <li>About Me</li>
-            <li>Life</li>
-             <li>Hobby</li>
-             <li>Favourite Things</li>
-             <li>Blog</li>
-             <li>INFO</li>
-        </u1>
-    </div>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="#" class="logo">Kiki's Website by Yongqi Xu</a>
+
+        <nav class="nav-links">
+            <h4>
+            <a href="#about">About Me</a>
+            <a href="#projects">Digital Practice</a>
+            <a href="#contact">Contact</a>
+            </h4>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero section -->
+        <section class="hero">
+            <p class="eyebrow">Kiki's Website — 2026</p>
+
+            <h1>
+                <span>Here is Kiki.</span><br>
+            </h1>
+            <h2>
+                <span>Want to know me more?</span><br>
+                You can find everything about me here.
+            </h2>
+
+            <div class="hero-bottom">
+                <p>
+                    Hi! I'm Kiki, here is my very first website.<br>
+                    I'm very excited to share myself and digital practice with you.
+                </p>
+
+                <a href="#projects" class="cta">
+                    EXPLORE MY WORK ↘
+                </a>
+            </div>
+
+            <div class="hero-shape" aria-hidden="true">
+                <span>💚🧡💜</span>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section class="about section" id="about">
+            <p class="eyebrow">01 / ABOUT ME</p>
+
+            <h2>A little about who I am.</h2>
+
+            <p class="body-copy">
+                I'm Kiki, a student in University of Leeds.<br>
+                My major is Digital Media.<br>
+                I love dancing and K-pop music.<br>
+                I want to explore more about digital culture and creative practice.
+            </p>
+        </section>
+
+        <!-- Projects section -->
+        <section class="projects section" id="projects">
+            <p class="eyebrow">02 / DIGITAL PRACTICE</p>
+
+            <h2>Things I'm learning.</h2>
+
+            <div class="project-grid">
+                <article class="project-card card-green">
+                    <span class="project-number">01</span>
+                    <span class="project-symbol">💚</span>
+                    <h3>Digital Culture</h3>
+                    <p>Exploring how we experience the digital world.</p>
+                </article>
+
+                <article class="project-card card-orange">
+                    <span class="project-number">02</span>
+                    <span class="project-symbol">🧡</span>
+                    <h3>Creative Practice</h3>
+                    <p>Experiments with design, ideas, and visual language.</p>
+                </article>
+
+                <article class="project-card card-lilac">
+                    <span class="project-number">03</span>
+                    <span class="project-symbol">💜</span>
+                    <h3>Future Ideas</h3>
+                    <p>A space for future projects and new discoveries.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section class="contact section" id="contact">
+            <p class="eyebrow">03 / GET IN TOUCH</p>
+            <h2>How to reach me</menu>.</h2>
+            <a href="mailto:hello@example.com" class="cta">
+                SAY HELLO ↗
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>2026 Kiki's website</p>
+        <a href="#">BACK TO TOP ↑</a>
+    </footer>
+
 </body>
 </html>
-
 

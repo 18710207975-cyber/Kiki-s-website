@@ -1,40 +1,281 @@
+
+/* 1. Global settings */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-color: gray;
-background: white;
-font-family: Verdana,Arial,Helvetica,sans-serif;
-margin-left: 10%;
-margin-right: 10%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #baf5cc;
+    color: #0a0a0a;
 }
-h1 {
-color: #457926;
-font-family: Georgia,"Times New Roman",Times,serif;
-font-size: 2em;
-text-transform: uppercase;
-margin-left: -8%;
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
-h2 {
-color: #457926;
-font-family: Georgia,"Times New Roman",Times,serif;
-font-size: 1.7em;
-border: solid;
-margin-left: -4%;
-margin-top: 2em;
-margin-bottom: 2em;
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
-p {
-font-size: 1.2em;
-text-indent: 2em;
+
+/* 2. Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 8%;
+    border-bottom: 1px solid #212120;
 }
-blockquote {
-font-size: 1em;
-font-style: italic;
-color: black;
-background: red;
+
+.logo {
+    font-size: 18px;
+    font-weight: 800;
 }
-.first-line {
-font-weight: bold;
+
+.logo span {
+    color: #f59344;
 }
-#first {
-font-size: 1.4em;
-color: blue;
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 13px;
+}
+
+.nav-links a:hover {
+    color: #f59344;
+}
+
+/* 3. Hero section */
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 8% 70px;
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 1;
+    margin: 35px 0;
+    font-size: clamp(48px, 8vw, 108px);
+    line-height: 0.98;
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: #f59344;
+}
+
+.hero-bottom {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+}
+
+.hero-bottom p {
+    max-width: 380px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.cta {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #24241F;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease;
+}
+
+.cta:hover {
+    background-color: #f59344;
+}
+
+.hero-shape {
+    position: absolute;
+    top: 100px;
+    right: 8%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-shape span {
+    font-size: 50px;
+    color: #0b0b0b;
+}
+
+/* 4. Shared section styles */
+.section {
+    padding: 75px 8%;
+}
+
+.section h2 {
+    max-width: 700px;
+    font-size: clamp(32px, 5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+/* 5. About section */
+.about {
+    background-color: #fcbc8a;
+}
+
+.body-copy {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #5C5B55;
+}
+
+/* 6. Project cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.project-card {
+    min-height: 280px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.card-green {
+    background-color: #5fef3b9b;
+}
+
+.card-orange {
+    background-color: #f69846c1;
+    color: #FFFFFF;
+}
+
+.card-lilac {
+    background-color: #dcd4f1c7;
+}
+
+.project-number {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.project-symbol {
+    align-self: flex-end;
+    font-size: 52px;
+    margin: 18px 0;
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin: auto 0 8px;
+}
+
+.project-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* 7. Contact and footer */
+.contact {
+    background-color: #fcbc8a;
+}
+
+.contact h2 {
+    margin-bottom: 30px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 8%;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* 8. Responsive layout for mobile */
+@media (max-width: 700px) {
+    .navbar {
+        padding: 20px 6%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 70px 6% 55px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-shape {
+        width: 75px;
+        height: 75px;
+        top: 75px;
+        right: 6%;
+    }
+
+    .hero-shape span {
+        font-size: 48px;
+    }
+
+    .hero-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .section {
+        padding: 55px 6%;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 240px;
+    }
+
+    .footer {
+        padding: 22px 6%;
+        flex-wrap: wrap;
+    }
 }
