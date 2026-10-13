@@ -47,7 +47,7 @@ a {
 
 .nav-links {
     display: flex;
-    gap: 28px;
+    gap: 75px;
 }
 
 .nav-links a {
@@ -110,8 +110,8 @@ a {
 
 .hero-shape {
     position: absolute;
-    top: 100px;
-    right: 8%;
+    top: 150px;
+    right: 10%;
     width: 150px;
     height: 150px;
     border-radius: 50%;
